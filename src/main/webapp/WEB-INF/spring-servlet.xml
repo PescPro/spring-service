@@ -27,4 +27,11 @@
         <property name="suffix" value=".jsp"></property>
     </bean>
     
+    <!-- 配置一个rmi服务 -->
+    <bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+     	<property name="service" ref="rmiService"></property>
+     	<property name="serviceName" value="rmiService1"></property>
+     	<property name="serviceInterface" value="com.pesc.study.spring.service.rmi.IRmiService"></property>
+     	<property name="registryPort" value="1199"></property>
+     </bean>
 </beans>
